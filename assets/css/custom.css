@@ -1,0 +1,46 @@
+body{
+	font-family: 'Hiragino Kaku Gothic ProN W3', Meiryo, Arial, Helvetica, sans-serif;
+}
+#header h1 a img {
+	margin-top: 10px;
+}
+.wrapper.style1 {
+	background-color: #d06c16;
+	color: #fff;
+}
+.wrapper.style3 {
+	background-color: #999;
+	color: #fff;
+}
+.wrapper.style3 header.major p {
+	color: #fff;
+}
+input[type="submit"].primary, input[type="reset"].primary, input[type="button"].primary, button.primary, .button.primary {
+	background-color: #d06c16;
+	box-shadow: none !important;
+	color: #ffffff !important;
+}
+.wrapper.style1 header.major p {
+	color: #ffffff;
+}
+.icon.style1,.icon.style2,.icon.style3 {
+	color: #ffffff;
+}
+@media screen and (max-width: 980px) {
+#header h1 a img {
+	margin-top: 5px;
+}
+#banner h3 img {
+	width: 60%!important;
+	height: auto!important;
+}
+.spotlight .actions {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	display: inline-block;
+}
+#three .major p br.sp {
+	display: block!important;
+}
+}
