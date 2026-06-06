@@ -25,7 +25,6 @@
 			color: var(--text);
 			overflow-x: hidden;
 		}
-		/* HEADER */
 		#site-header {
 			position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
 			display: flex; align-items: center; justify-content: space-between;
@@ -55,7 +54,6 @@
 			nav.open { transform: translateY(0); }
 			nav ul { flex-direction: column; gap: 1.2rem; }
 		}
-		/* HERO */
 		#hero {
 			min-height: 100vh; background: var(--dark);
 			display: flex; align-items: center; justify-content: center;
@@ -82,10 +80,8 @@
 			51% { transform: scaleY(1); transform-origin: bottom; }
 			100% { transform: scaleY(0); transform-origin: bottom; }
 		}
-		/* WAVE */
 		.wave-divider { display: block; width: 100%; overflow: hidden; line-height: 0; margin: 0; }
 		.wave-divider svg { display: block; width: 100%; }
-		/* SECTION */
 		section.page-section { padding: 6rem 2rem; position: relative; }
 		.section-inner { max-width: 1000px; margin: 0 auto; }
 		.section-label {
@@ -93,7 +89,6 @@
 			letter-spacing: 0.3em; color: var(--accent); text-transform: uppercase; margin-bottom: 0.6rem;
 		}
 		.section-title { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 700; margin-bottom: 2rem; line-height: 1.3; }
-		/* BUSINESS */
 		#business { background: var(--light); }
 		.business-grid { display: grid; gap: 3rem; margin-top: 3rem; }
 		.business-card {
@@ -113,8 +108,6 @@
 		.business-card .card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; display: block; }
 		.business-card:hover .card-img img { transform: scale(1.05); }
 		.business-card .card-img a:hover img { transform: scale(1.08); }
-		/* 画像リンクのカーソル */
-		.business-card .card-img a { cursor: pointer; }
 		.card-body {
 			padding: 2.5rem; display: flex; flex-direction: column; justify-content: center;
 		}
@@ -134,14 +127,11 @@
 			.business-card { grid-template-columns: 1fr; }
 			.business-card:nth-child(even) { direction: ltr; }
 		}
-		/* CONTACT */
 		#contact { background: var(--dark); color: white; text-align: center; }
 		#contact p { color: rgba(255,255,255,0.7); margin-bottom: 2rem; font-size: 1rem; }
-		/* FOOTER */
 		footer { background: #111122; color: rgba(255,255,255,0.4); text-align: center; padding: 2rem; font-size: 0.8rem; letter-spacing: 0.1em; }
 		footer a { color: rgba(255,255,255,0.5); text-decoration: none; margin: 0 0.5rem; }
 		footer a:hover { color: var(--accent-light); }
-		/* ANIMATIONS */
 		@keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 		.spiral-ring { animation: rotateSlow linear infinite; transform-origin: center; }
 		.spiral-ring:nth-child(1) { animation-duration: 40s; }
@@ -219,22 +209,7 @@
 					</div>
 				</div>
 
-				<!-- 2. フラッグラボ -->
-				<div class="business-card">
-					<div class="card-img">
-						<a href="mailto:info@harmo.co.jp">
-							<img src="images/pic_flgp.jpg" alt="フラッグラボ">
-						</a>
-					</div>
-					<div class="card-body">
-						<p class="card-tag">Medical Support</p>
-						<h3>クリニック・薬局開業支援<br>フラッグラボ 運営</h3>
-						<p>開業支援経験者がチームで先導〜薬局経営者や建築士、社労士、元医療法人従事者、医療機器従事者がサポートします。お気軽にお問い合わせください。</p>
-						<a href="mailto:info@harmo.co.jp" class="btn-primary">お問い合わせ</a>
-					</div>
-				</div>
-
-				<!-- 3. フェリアパートナーズ -->
+				<!-- 2. フェリアパートナーズ -->
 				<div class="business-card">
 					<div class="card-img">
 						<a href="https://feria-partners.jp/" target="_blank" rel="noopener">
@@ -242,14 +217,14 @@
 						</a>
 					</div>
 					<div class="card-body">
-						<p class="card-tag">Marriage Consulting</p>
+						<p class="card-tag">Feria Partners</p>
 						<h3>結婚相談所<br>フェリアパートナーズ 運営</h3>
 						<p>"結婚は人生を2倍彩り豊かにする旅"パートナーは欲しい、でも出逢いが無い、そんな悩みで諦めかけている方必見！出逢いは必ず訪れます！</p>
 						<a href="https://feria-partners.jp/" target="_blank" rel="noopener" class="btn-primary">公式ページ</a>
 					</div>
 				</div>
 
-				<!-- 4. 理学塾解体新床 -->
+				<!-- 3. 理学塾解体新床 -->
 				<div class="business-card">
 					<div class="card-img">
 						<a href="https://kaitaishinshou.jp/" target="_blank" rel="noopener">
@@ -257,10 +232,25 @@
 						</a>
 					</div>
 					<div class="card-body">
-						<p class="card-tag">Physical Therapy</p>
+						<p class="card-tag">Kaitai Shinshou</p>
 						<h3>理学塾 解体新床 運営</h3>
 						<p>慢性疾患型腰痛、肩こり、頭痛改善。首や背骨のズレ、坐骨神経痛、腕の痺れ、膝痛、事故後遺症の改善。神経難病系統から格闘家・運動選手の指導まで。</p>
 						<a href="https://kaitaishinshou.jp/" target="_blank" rel="noopener" class="btn-primary">公式ページ</a>
+					</div>
+				</div>
+
+				<!-- 4. フラッグラボ -->
+				<div class="business-card">
+					<div class="card-img">
+						<a href="mailto:info@harmo.co.jp">
+							<img src="images/pic_flgp.jpg" alt="フラッグラボ">
+						</a>
+					</div>
+					<div class="card-body">
+						<p class="card-tag">Flag Lab</p>
+						<h3>クリニック・薬局開業支援<br>フラッグラボ 運営</h3>
+						<p>開業支援経験者がチームで先導〜薬局経営者や建築士、社労士、元医療法人従事者、医療機器従事者がサポートします。お気軽にお問い合わせください。</p>
+						<a href="mailto:info@harmo.co.jp" class="btn-primary">お問い合わせ</a>
 					</div>
 				</div>
 
@@ -270,7 +260,7 @@
 						<img src="images/pic_sbg.jpg" alt="サバゲー事業">
 					</div>
 					<div class="card-body">
-						<p class="card-tag">Team Building</p>
+						<p class="card-tag">Survival Game</p>
 						<h3>サバゲー・チームビルディング事業<br><small style="font-size:0.8rem;color:#999;">Comming Soon</small></h3>
 						<p>サバゲー（サバイバルゲーム）を活用した革新的なチームビルディングおよび社員教育サービスを提供。実践的な協力とコミュニケーションスキルを磨きます。</p>
 					</div>
