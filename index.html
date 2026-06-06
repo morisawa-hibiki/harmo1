@@ -27,12 +27,8 @@
 		}
 		/* HEADER */
 		#site-header {
-			position: fixed;
-			top: 0; left: 0; right: 0;
-			z-index: 1000;
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
+			position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+			display: flex; align-items: center; justify-content: space-between;
 			padding: 1rem 2.5rem;
 			background: rgba(26, 26, 46, 0.92);
 			backdrop-filter: blur(8px);
@@ -42,83 +38,40 @@
 		#site-header .logo img { height: 40px; }
 		nav ul { list-style: none; display: flex; gap: 2rem; }
 		nav ul li a {
-			color: #e8e8e8;
-			text-decoration: none;
-			font-size: 0.85rem;
-			letter-spacing: 0.15em;
-			position: relative;
-			padding-bottom: 4px;
-			transition: color 0.3s;
+			color: #e8e8e8; text-decoration: none; font-size: 0.85rem;
+			letter-spacing: 0.15em; position: relative; padding-bottom: 4px; transition: color 0.3s;
 		}
 		nav ul li a::after {
-			content: '';
-			position: absolute;
-			bottom: 0; left: 0;
-			width: 0; height: 1px;
-			background: var(--accent);
-			transition: width 0.3s;
+			content: ''; position: absolute; bottom: 0; left: 0;
+			width: 0; height: 1px; background: var(--accent); transition: width 0.3s;
 		}
 		nav ul li a:hover { color: var(--accent-light); }
 		nav ul li a:hover::after { width: 100%; }
-		.hamburger {
-			display: none;
-			flex-direction: column;
-			gap: 5px;
-			cursor: pointer;
-			background: none;
-			border: none;
-			padding: 4px;
-		}
+		.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
 		.hamburger span { display: block; width: 26px; height: 2px; background: #e8e8e8; transition: 0.3s; }
 		@media (max-width: 768px) {
 			.hamburger { display: flex; }
-			nav {
-				position: fixed;
-				top: 64px; left: 0; right: 0;
-				background: rgba(26, 26, 46, 0.97);
-				padding: 1.5rem;
-				transform: translateY(-200%);
-				transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-			}
+			nav { position: fixed; top: 64px; left: 0; right: 0; background: rgba(26,26,46,0.97); padding: 1.5rem; transform: translateY(-200%); transition: transform 0.4s cubic-bezier(0.16,1,0.3,1); }
 			nav.open { transform: translateY(0); }
 			nav ul { flex-direction: column; gap: 1.2rem; }
 		}
 		/* HERO */
 		#hero {
-			min-height: 100vh;
-			background: var(--dark);
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			position: relative;
-			overflow: hidden;
+			min-height: 100vh; background: var(--dark);
+			display: flex; align-items: center; justify-content: center;
+			position: relative; overflow: hidden;
 		}
 		.spiral-bg { position: absolute; inset: 0; pointer-events: none; }
 		.hero-inner { position: relative; z-index: 2; text-align: center; }
-		.hero-inner img {
-			width: min(55%, 380px);
-			animation: fadeUp 1.2s ease both;
-		}
+		.hero-inner img { width: min(55%, 380px); animation: fadeUp 1.2s ease both; }
 		.hero-scroll {
-			position: absolute;
-			bottom: 2.5rem;
-			left: 50%;
-			transform: translateX(-50%);
-			color: rgba(232,232,232,0.6);
-			font-size: 0.75rem;
-			letter-spacing: 0.2em;
-			text-decoration: none;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			gap: 8px;
-			animation: fadeUp 1.6s 0.4s ease both;
-			transition: color 0.3s;
+			position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
+			color: rgba(232,232,232,0.6); font-size: 0.75rem; letter-spacing: 0.2em;
+			text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px;
+			animation: fadeUp 1.6s 0.4s ease both; transition: color 0.3s;
 		}
 		.hero-scroll::after {
-			content: '';
-			display: block;
-			width: 1px; height: 48px;
+			content: ''; display: block; width: 1px; height: 48px;
 			background: linear-gradient(to bottom, rgba(200,129,58,0.8), transparent);
 			animation: scrollLine 2s infinite;
 		}
@@ -136,31 +89,18 @@
 		section.page-section { padding: 6rem 2rem; position: relative; }
 		.section-inner { max-width: 1000px; margin: 0 auto; }
 		.section-label {
-			font-family: 'Cormorant Garamond', serif;
-			font-size: 0.8rem;
-			letter-spacing: 0.3em;
-			color: var(--accent);
-			text-transform: uppercase;
-			margin-bottom: 0.6rem;
+			font-family: 'Cormorant Garamond', serif; font-size: 0.8rem;
+			letter-spacing: 0.3em; color: var(--accent); text-transform: uppercase; margin-bottom: 0.6rem;
 		}
-		.section-title {
-			font-size: clamp(1.6rem, 4vw, 2.4rem);
-			font-weight: 700;
-			margin-bottom: 2rem;
-			line-height: 1.3;
-		}
+		.section-title { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 700; margin-bottom: 2rem; line-height: 1.3; }
 		/* BUSINESS */
 		#business { background: var(--light); }
 		.business-grid { display: grid; gap: 3rem; margin-top: 3rem; }
 		.business-card {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			gap: 0;
-			border-radius: 1.5rem;
-			overflow: hidden;
+			display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+			border-radius: 1.5rem; overflow: hidden;
 			box-shadow: 0 8px 40px rgba(0,0,0,0.1);
-			opacity: 0;
-			transform: translateY(30px);
+			opacity: 0; transform: translateY(30px);
 			transition: opacity 0.7s ease, transform 0.7s ease;
 			background: white;
 		}
@@ -168,41 +108,25 @@
 		.business-card:nth-child(even) { direction: rtl; }
 		.business-card:nth-child(even) > * { direction: ltr; }
 		.business-card .card-img { position: relative; overflow: hidden; min-height: 280px; }
-		.business-card .card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+		.business-card .card-img a { display: block; width: 100%; height: 100%; }
+		.business-card .card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; display: block; }
 		.business-card:hover .card-img img { transform: scale(1.05); }
-		.card-img-dummy {
-			width: 100%; height: 100%; min-height: 280px;
-			background: linear-gradient(135deg, #1a1a2e 0%, #2d2d4e 50%, #c8813a22 100%);
-			display: flex; align-items: center; justify-content: center;
-		}
-		.card-img-dummy i { font-size: 5rem; color: var(--accent); opacity: 0.7; }
-		.business-card .card-body {
-			padding: 2.5rem;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
+		.business-card .card-img a:hover img { transform: scale(1.08); }
+		/* 画像リンクのカーソル */
+		.business-card .card-img a { cursor: pointer; }
+		.card-body {
+			padding: 2.5rem; display: flex; flex-direction: column; justify-content: center;
 		}
 		.card-tag {
-			font-size: 0.7rem;
-			letter-spacing: 0.2em;
-			color: var(--accent);
-			text-transform: uppercase;
-			margin-bottom: 0.8rem;
-			font-family: 'Cormorant Garamond', serif;
+			font-size: 0.7rem; letter-spacing: 0.2em; color: var(--accent);
+			text-transform: uppercase; margin-bottom: 0.8rem; font-family: 'Cormorant Garamond', serif;
 		}
 		.card-body h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; line-height: 1.5; }
 		.card-body p { font-size: 0.9rem; line-height: 1.8; color: #555; margin-bottom: 1.5rem; }
 		.btn-primary {
-			display: inline-block;
-			padding: 0.7rem 1.8rem;
-			background: var(--accent);
-			color: white;
-			text-decoration: none;
-			border-radius: 2rem;
-			font-size: 0.85rem;
-			letter-spacing: 0.1em;
-			transition: background 0.3s, transform 0.2s;
-			align-self: flex-start;
+			display: inline-block; padding: 0.7rem 1.8rem; background: var(--accent);
+			color: white; text-decoration: none; border-radius: 2rem; font-size: 0.85rem;
+			letter-spacing: 0.1em; transition: background 0.3s, transform 0.2s; align-self: flex-start;
 		}
 		.btn-primary:hover { background: var(--accent-light); transform: translateY(-2px); }
 		@media (max-width: 700px) {
@@ -213,29 +137,16 @@
 		#contact { background: var(--dark); color: white; text-align: center; }
 		#contact p { color: rgba(255,255,255,0.7); margin-bottom: 2rem; font-size: 1rem; }
 		/* FOOTER */
-		footer {
-			background: #111122;
-			color: rgba(255,255,255,0.4);
-			text-align: center;
-			padding: 2rem;
-			font-size: 0.8rem;
-			letter-spacing: 0.1em;
-		}
+		footer { background: #111122; color: rgba(255,255,255,0.4); text-align: center; padding: 2rem; font-size: 0.8rem; letter-spacing: 0.1em; }
 		footer a { color: rgba(255,255,255,0.5); text-decoration: none; margin: 0 0.5rem; }
 		footer a:hover { color: var(--accent-light); }
 		/* ANIMATIONS */
-		@keyframes fadeUp {
-			from { opacity: 0; transform: translateY(20px); }
-			to { opacity: 1; transform: translateY(0); }
-		}
+		@keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 		.spiral-ring { animation: rotateSlow linear infinite; transform-origin: center; }
 		.spiral-ring:nth-child(1) { animation-duration: 40s; }
 		.spiral-ring:nth-child(2) { animation-duration: 60s; animation-direction: reverse; }
 		.spiral-ring:nth-child(3) { animation-duration: 80s; }
-		@keyframes rotateSlow {
-			from { transform: rotate(0deg); }
-			to { transform: rotate(360deg); }
-		}
+		@keyframes rotateSlow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 	</style>
 </head>
 <body>
@@ -292,9 +203,12 @@
 			<h2 class="section-title">事業紹介</h2>
 			<div class="business-grid">
 
+				<!-- 1. デジタルサイネージ -->
 				<div class="business-card">
 					<div class="card-img">
-						<img src="images/pic_kaitaishinnsyou1.png" alt="デジタルサイネージ事業">
+						<a href="mailto:info@harmo.co.jp">
+							<img src="images/pic_kaitaishinnsyou1.png" alt="デジタルサイネージ事業">
+						</a>
 					</div>
 					<div class="card-body">
 						<p class="card-tag">Digital Signage</p>
@@ -304,8 +218,13 @@
 					</div>
 				</div>
 
+				<!-- 2. フラッグラボ -->
 				<div class="business-card">
-					<div class="card-img"><img src="images/pic_flgp.jpg" alt="フラッグラボ"></div>
+					<div class="card-img">
+						<a href="mailto:info@harmo.co.jp">
+							<img src="images/pic_flgp.jpg" alt="フラッグラボ">
+						</a>
+					</div>
 					<div class="card-body">
 						<p class="card-tag">Medical Support</p>
 						<h3>クリニック・薬局開業支援<br>フラッグラボ 運営</h3>
@@ -314,28 +233,41 @@
 					</div>
 				</div>
 
+				<!-- 3. フェリアパートナーズ -->
 				<div class="business-card">
-					<div class="card-img"><img src="images/pic_feria.jpg" alt="結婚相談所フェリアパートナーズ"></div>
+					<div class="card-img">
+						<a href="https://feria-partners.jp/" target="_blank" rel="noopener">
+							<img src="images/pic_feria.jpg" alt="結婚相談所フェリアパートナーズ">
+						</a>
+					</div>
 					<div class="card-body">
 						<p class="card-tag">Marriage Consulting</p>
 						<h3>結婚相談所<br>フェリアパートナーズ 運営</h3>
 						<p>"結婚は人生を2倍彩り豊かにする旅"パートナーは欲しい、でも出逢いが無い、そんな悩みで諦めかけている方必見！出逢いは必ず訪れます！</p>
-						<a href="https://feria-partners.jp/" class="btn-primary">公式ページ</a>
+						<a href="https://feria-partners.jp/" target="_blank" rel="noopener" class="btn-primary">公式ページ</a>
 					</div>
 				</div>
 
+				<!-- 4. 理学塾解体新床 -->
 				<div class="business-card">
-					<div class="card-img"><img src="images/pic_kaitaishinshou.jpg" alt="理学塾解体新床"></div>
+					<div class="card-img">
+						<a href="https://kaitaishinshou.jp/" target="_blank" rel="noopener">
+							<img src="images/pic_kaitaishinshou.jpg" alt="理学塾解体新床">
+						</a>
+					</div>
 					<div class="card-body">
 						<p class="card-tag">Physical Therapy</p>
 						<h3>理学塾 解体新床 運営</h3>
 						<p>慢性疾患型腰痛、肩こり、頭痛改善。首や背骨のズレ、坐骨神経痛、腕の痺れ、膝痛、事故後遺症の改善。神経難病系統から格闘家・運動選手の指導まで。</p>
-						<a href="https://kaitaishinshou.jp/" class="btn-primary">公式ページ</a>
+						<a href="https://kaitaishinshou.jp/" target="_blank" rel="noopener" class="btn-primary">公式ページ</a>
 					</div>
 				</div>
 
+				<!-- 5. サバゲー -->
 				<div class="business-card">
-					<div class="card-img"><img src="images/pic_sbg.jpg" alt="サバゲー事業"></div>
+					<div class="card-img">
+						<img src="images/pic_sbg.jpg" alt="サバゲー事業">
+					</div>
 					<div class="card-body">
 						<p class="card-tag">Team Building</p>
 						<h3>サバゲー・チームビルディング事業<br><small style="font-size:0.8rem;color:#999;">Comming Soon</small></h3>
@@ -383,3 +315,4 @@
 	</script>
 </body>
 </html>
+
